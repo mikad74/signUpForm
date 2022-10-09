@@ -27,6 +27,7 @@ body {
   display: flex;
   align-items: center;
   top: 25vh;
+  overflow: hidden;
   width: 100%;
   height: 5rem;
   background: gray;
@@ -86,6 +87,7 @@ body {
   border: 0;
   height: 100vh;
   width: max(60vw, var(--login-min-width));
+  min-width: var(--login-min-width);
   display: flex;
   flex-direction: column;
   background: lightyellow;
@@ -95,7 +97,7 @@ body {
 .login-container > .login-box {
   padding: 1rem 0;
   min-height: min(auto, 30rem);
-  max-width: 90%;
+  width: 90%;
   border-radius: 10pt;
   background: #fffdd0;
   display: flex;
@@ -105,11 +107,11 @@ body {
 }
 
 .login-box > .title {
-  font-size: min(6vw, 30pt);
+  font-size: max(14pt, min(6vw, 30pt));
   font-weight: 600;
 }
 .login-box > div {
-  margin: 1rem;
+  margin: 0rem 1rem;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -120,7 +122,7 @@ body {
 .login-box input:not(#phone_number) {
   color: black;
   border: 1px solid lightgrey;
-  border-radius: 3px;
+  border-radius: 3px - 8px;
   margin: 0.5rem;
   width: 12rem;
   padding: 2px;
@@ -148,7 +150,7 @@ div#phone-container > .iti {
 }
 
 .login-box label {
-  font-size: min(3vw, 15pt);
+  font-size: max(8pt, min(3vw, 14pt));
   font-weight: 600;
   text-align: center;
 }
@@ -165,3 +167,25 @@ div#phone-container > .iti {
 .login-container > div {
   flex: 1;
 }
+
+.bottom {
+  width: 100%;
+}
+
+.bottom > div {
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 0.5rem;
+}
+
+.submit-container button {
+  color: lightyellow;
+  font-size: max(8pt, min(3vw, 14pt));
+  font-weight: 600;
+  background: green;
+  border: 0;
+  border-radius: 3px;
+  height: 2rem;
+  width: max(6rem, min(20vw, 10rem));
+}
+

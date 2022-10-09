@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alkalami&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  </head>
+  <body>
+    <div class="ambiance">
+      <div class="logo-container">
+        <div class="logo">
+          <img src="assets/logo.png" alt="" />
+          <p>Logo Text Here</p>
+        </div>
+      </div>
+      <img src="assets/daniel-tran.jpg" alt="ambiance" />
+      <div class="photo-credits">
+        Photo by <a href="https://unsplash.com/@dtmtran">Daniel Tran</a> on
+        <a href="https://unsplash.com/photos/qserOK0lp6U">Unsplash</a>
+      </div>
+    </div>
+    <div class="login-container">
+      <div class="top"></div>
+      <div class="login-box">
+        <div class="title">Welcome!</div>
+        <div class="name">
+          <label for="first_name"
+            >First Name: <input type="text" name="first_name" id="first_name"
+          /></label>
+          <label for="last_name"
+            >Last Name: <input type="text" name="last_name" id="last_name"
+          /></label>
+        </div>
+        <div class="contact">
+          <label for="user_email"
+            >Email: <input type="email" name="user_email" id="user_email"
+          /></label>
+          <label for="phone_number"
+            >Phone Number:
+            <div id="phone-container">
+              <input type="tel" name="phone_number" id="phone_number" /></div
+          ></label>
+        </div>
+        <div class="password">
+          <label for="password"
+            >Password: <input type="password" name="password" id="password"
+          /></label>
+          <label for="password_confirm"
+            >Confirm Password:
+            <input
+              type="password"
+              name="password_confirm"
+              id="password_confirm"
+          /></label>
+        </div>
+      </div>
+      <div class="bottom"></div>
+    </div>
+  </body>
+  <script>
+    const phoneInputField = document.querySelector("#phone_number");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+      utilsScript:
+        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+  </script>
+</html>
